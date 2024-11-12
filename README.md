@@ -11,3 +11,12 @@ and PX4 using the [PX4-ROS2 DDS Bridge](https://docs.px4.io/main/en/middleware/u
 | --------- | --------- |
 | `/fmu/in/vehicle_visual_odometry` | [`px4_msgs/VehicleOdometry`](https://github.com/PX4/px4_msgs/blob/main/msg/VehicleOdometry.msg) |
 | `/vio_transform/imu` | [`sensor_msgs/Imu`](https://docs.ros2.org/humble/api/sensor_msgs/msg/Imu.html) |
+
+# Build And Installation
+Build the same way as the original package,be sure to source your px4_msg package globally,otherwise it won't be found.
+
+```
+cd <Package_of_bridge>
+colcon build --packages-select px4_vslam
+source install/setup.bash
+```
