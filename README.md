@@ -1,11 +1,10 @@
 ## PX4 VIO using NVIDIA Isaac ROS Visual SLAM
-Bridge node between [Isaac ROS Visual SLAM](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_visual_slam)
+Bridge node between RTABMAP-ROS2 [RTABMAP-ROS2]((https://github.com/introlab/rtabmap_ros/tree/ros2#rtabmap_ros))
 and PX4 using the [PX4-ROS2 DDS Bridge](https://docs.px4.io/main/en/middleware/uxrce_dds.html)
 
 | Subscribed Topics | Interface |
 | --------- | --------- |
-| `/visual_slam/tracking/odometry` | [`nav_msgs/Odometry`](https://github.com/ros2/common_interfaces/blob/humble/nav_msgs/msg/Odometry.msg) | 
-| `/visual_slam/status` | [`isaac_ros_visual_slam_interfaces/visual_slam_status`](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_visual_slam/blob/main/isaac_ros_visual_slam_interfaces/msg/VisualSlamStatus.msg) |
+| `/odom` | [`nav_msgs/Odometry`] | 
 | `/fmu/out/sensor_combined` | [`px4_msgs/sensor_combined`](https://github.com/PX4/px4_msgs/blob/main/msg/SensorCombined.msg) |
 
 | Published Topics | Interface |
